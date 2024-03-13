@@ -1,0 +1,10 @@
+name: temperature
+channels:
+ - conda-forge
+ - base
+ - R
+ - bioconda
+dependencies:
+ - r-base=4.1.3
+ - r-tidyverse=2.0.0
+ - snakemake=8.6.0
