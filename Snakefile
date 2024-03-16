@@ -12,7 +12,11 @@ rule test:
         "bash ./{input.script}"
 
 rule get_sensor_data:
+    input:
+        script = "code/get_sensor_data.bash"
+    params:
+        sensor_id = 25765
     output:
         "data/sensor.json"
     shell:
-        "curl https://data.sensor.community/airrohr/v1/sensor/25765/ > data/sensor.json"
+        "bash ./{input.script} {params.sensor_id}"
