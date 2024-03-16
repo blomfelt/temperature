@@ -4,10 +4,12 @@ rule targets:
         "data/sensor.json"
 
 rule test:
+    input:
+        script = "code/test.sh"
     output:
         "data/test.txt"
     shell:
-        "echo hej > data/test.txt"
+        "bash ./{input.script}"
 
 rule get_sensor_data:
     output:
