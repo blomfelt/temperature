@@ -8,7 +8,6 @@ slidingwindow = 30
 
 # Read in the old data
 all_values <- read_tsv("values.tsv")
-
 data_files = list.files(path = "data", pattern = ".json", full.names = TRUE)
 
 for (i in 1:length(data_files)){

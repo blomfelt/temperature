@@ -4,7 +4,7 @@ rule all:
     input:
         expand("data/sensor_{sensorID}.json", sensorID = SENSORS),
         "data/test.txt",
-        expand("data/sensor_{sensorID}_temp.txt", sensorID = SENSORS)
+        "values.tsv"
 
 rule get_sensor_data:
     input:
@@ -22,17 +22,21 @@ rule test:
     shell:
         "bash ./{input.script}"
 
-rule extract_temp:
-    input:
-        "data/sensor_{sensor_ID}.json"
+rule copy_values:
     output:
-        "data/sensor_{sensor_ID}_temp.txt"
-    script:
+        "old_values.tsv"
+    shell:
+        "cp values.tsv old_values.tsv"
+
+rule add_new_data:
+    input:
+        script = "code/read_json.R",
+        data = expand("data/sensor_{sensorID}.json", sensorID = SENSORS),
+        val = "old_values.tsv"
+    output:
+        "values.tsv"
+    shell:
         """
-        import json
-        with open('{input}', 'r') as infile:
-            temp_data = json.load(infile)
-            print(temp_data);
-        with open('{output}', 'w') as file:
-            file.write(json.dumps(temp_data))
+        cp old_values.tsv values.tsv
+        Rscript ./{input.script}
         """

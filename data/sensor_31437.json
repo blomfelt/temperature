@@ -2,89 +2,89 @@
     {
         "sensordatavalues": [
             {
-                "value_type": "temperature",
-                "value": "2.95",
-                "id": 44678153696
+                "value": "-0.60",
+                "id": 44683501189,
+                "value_type": "temperature"
             },
             {
-                "value_type": "pressure",
-                "value": "101565.84",
-                "id": 44678153707
+                "value": "101654.19",
+                "id": 44683501190,
+                "value_type": "pressure"
             },
             {
-                "value_type": "humidity",
-                "value": "45.46",
-                "id": 44678153727
+                "value": "57.74",
+                "id": 44683501193,
+                "value_type": "humidity"
             },
             {
-                "value_type": "pressure_at_sealevel",
-                "value": 102605.49
+                "value": 102708.35,
+                "value_type": "pressure_at_sealevel"
             }
         ],
-        "timestamp": "2024-03-17 15:17:47",
-        "sampling_rate": null,
+        "location": {
+            "country": "SE",
+            "latitude": "57.68197241179",
+            "exact_location": 1,
+            "altitude": "82.4",
+            "longitude": "11.97733193636",
+            "id": 18061,
+            "indoor": 0
+        },
+        "timestamp": "2024-03-17 19:13:17",
         "sensor": {
             "sensor_type": {
-                "name": "BME280",
                 "manufacturer": "Bosch",
+                "name": "BME280",
                 "id": 17
             },
-            "id": 31437,
-            "pin": "11"
+            "pin": "11",
+            "id": 31437
         },
-        "location": {
-            "indoor": 0,
-            "exact_location": 1,
-            "longitude": "11.97733193636",
-            "country": "SE",
-            "altitude": "82.4",
-            "latitude": "57.68197241179",
-            "id": 18061
-        },
-        "id": 19657073719
+        "id": 19659324082,
+        "sampling_rate": null
     },
     {
         "sensordatavalues": [
             {
-                "value_type": "temperature",
-                "value": "2.94",
-                "id": 44678097175
+                "value": "-0.57",
+                "id": 44683445246,
+                "value_type": "temperature"
             },
             {
-                "value_type": "pressure",
-                "value": "101556.38",
-                "id": 44678097181
+                "value": "101655.25",
+                "id": 44683445274,
+                "value_type": "pressure"
             },
             {
-                "value_type": "humidity",
-                "value": "45.71",
-                "id": 44678097184
+                "value": "57.70",
+                "id": 44683445423,
+                "value_type": "humidity"
             },
             {
-                "value_type": "pressure_at_sealevel",
-                "value": 102595.97
+                "value": 102709.31,
+                "value_type": "pressure_at_sealevel"
             }
         ],
-        "timestamp": "2024-03-17 15:15:21",
-        "sampling_rate": null,
+        "location": {
+            "country": "SE",
+            "latitude": "57.68197241179",
+            "exact_location": 1,
+            "altitude": "82.4",
+            "longitude": "11.97733193636",
+            "id": 18061,
+            "indoor": 0
+        },
+        "timestamp": "2024-03-17 19:10:52",
         "sensor": {
             "sensor_type": {
-                "name": "BME280",
                 "manufacturer": "Bosch",
+                "name": "BME280",
                 "id": 17
             },
-            "id": 31437,
-            "pin": "11"
+            "pin": "11",
+            "id": 31437
         },
-        "location": {
-            "indoor": 0,
-            "exact_location": 1,
-            "longitude": "11.97733193636",
-            "country": "SE",
-            "altitude": "82.4",
-            "latitude": "57.68197241179",
-            "id": 18061
-        },
-        "id": 19657049925
+        "id": 19659300576,
+        "sampling_rate": null
     }
 ]
