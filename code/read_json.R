@@ -1,5 +1,8 @@
+#!/usr/bin/env Rscript
+
 library("rjson")
 library("tidyverse")
+library("hms")
 
 slidingwindow = 30
 
