@@ -1,0 +1,90 @@
+[
+    {
+        "sensordatavalues": [
+            {
+                "value_type": "temperature",
+                "value": "2.95",
+                "id": 44678153696
+            },
+            {
+                "value_type": "pressure",
+                "value": "101565.84",
+                "id": 44678153707
+            },
+            {
+                "value_type": "humidity",
+                "value": "45.46",
+                "id": 44678153727
+            },
+            {
+                "value_type": "pressure_at_sealevel",
+                "value": 102605.49
+            }
+        ],
+        "timestamp": "2024-03-17 15:17:47",
+        "sampling_rate": null,
+        "sensor": {
+            "sensor_type": {
+                "name": "BME280",
+                "manufacturer": "Bosch",
+                "id": 17
+            },
+            "id": 31437,
+            "pin": "11"
+        },
+        "location": {
+            "indoor": 0,
+            "exact_location": 1,
+            "longitude": "11.97733193636",
+            "country": "SE",
+            "altitude": "82.4",
+            "latitude": "57.68197241179",
+            "id": 18061
+        },
+        "id": 19657073719
+    },
+    {
+        "sensordatavalues": [
+            {
+                "value_type": "temperature",
+                "value": "2.94",
+                "id": 44678097175
+            },
+            {
+                "value_type": "pressure",
+                "value": "101556.38",
+                "id": 44678097181
+            },
+            {
+                "value_type": "humidity",
+                "value": "45.71",
+                "id": 44678097184
+            },
+            {
+                "value_type": "pressure_at_sealevel",
+                "value": 102595.97
+            }
+        ],
+        "timestamp": "2024-03-17 15:15:21",
+        "sampling_rate": null,
+        "sensor": {
+            "sensor_type": {
+                "name": "BME280",
+                "manufacturer": "Bosch",
+                "id": 17
+            },
+            "id": 31437,
+            "pin": "11"
+        },
+        "location": {
+            "indoor": 0,
+            "exact_location": 1,
+            "longitude": "11.97733193636",
+            "country": "SE",
+            "altitude": "82.4",
+            "latitude": "57.68197241179",
+            "id": 18061
+        },
+        "id": 19657049925
+    }
+]
