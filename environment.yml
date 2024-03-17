@@ -7,4 +7,5 @@ channels:
 dependencies:
  - r-base=4.1.3
  - r-tidyverse=2.0.0
+ - r-rjson=0.2.21
  - snakemake=8.6.0
