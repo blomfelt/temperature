@@ -1,6 +1,8 @@
 library("rjson")
 library("tidyverse")
 
+slidingwindow = 30
+
 # Read in the old data
 all_values <- read_tsv("values.tsv")
 
