@@ -5,7 +5,8 @@ rule all:
         expand("data/sensor_{sensorID}.json", sensorID = SENSORS),
         "values.tsv",
         "visuals/day_temp.png",
-        "visuals/max_temp.png"
+        "visuals/max_temp.png",
+        "index.html"
 
 rule get_sensor_data:
     input:
@@ -44,4 +45,14 @@ rule visualize_data:
         """
         ./{input}
         """
-    
+
+rule create_html:
+    input:
+        script = "index.Rmd",
+        png = "visuals/day_temp.png"
+    output:
+        "index.html"
+    shell:
+        """
+        R -e "library(rmarkdown); render('{input.script}')" 
+        """

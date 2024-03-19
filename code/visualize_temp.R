@@ -26,12 +26,6 @@ normalized_values %>%
     geom_line()
 ggsave("visuals/day_temp.png")
 
-# Extract the latest values for all sensors
-last_values <- normalized_values %>%
-    group_by(sensor_id) %>%
-    slice_tail(n = 1) %>%
-    ungroup()
-
 # Plot the maximum daily values for each sensor
 values %>%
     group_by(date, sensor_id) %>%
@@ -40,3 +34,10 @@ values %>%
     geom_line()
 ggsave("visuals/max_temp.png")
 
+# Extract the latest values for all sensors
+last_values <- normalized_values %>%
+    group_by(sensor_id) %>%
+    slice_tail(n = 1) %>%
+    ungroup()
+
+last_values
