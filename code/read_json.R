@@ -4,11 +4,11 @@ library("rjson")
 library("tidyverse")
 library("hms")
 
-slidingwindow = 30
+slidingwindow <-  30
 
 # Read in the old data
 all_values <- read_tsv("values.tsv")
-data_files = list.files(path = "data", pattern = ".json", full.names = TRUE)
+data_files <- list.files(path = "data", pattern = ".json", full.names = TRUE)
 
 for (i in 1:length(data_files)){
     # Read in the current sensor
@@ -35,12 +35,12 @@ for (i in 1:length(data_files)){
     # Create time and date
     date_df <- as.data.frame(current_sensor[[1]]$timestamp)
     date_time <- ymd_hms(date_df)
-    date = as_date(date_time)
-    time = as_hms(date_time)
+    date <- as_date(date_time)
+    time <- as_hms(date_time)
 
     # Add date and time
-    values["date"] = date
-    values["time"] = time
+    values["date"] <- date
+    values["time"] <- time
 
     # Add the sensor id
     values["sensor_id"] <- sensor_id
@@ -60,6 +60,3 @@ all_values <- all_values %>%
 
 # Write it to the file again
 write_tsv(all_values, "values.tsv")
-
-#todo: Lägg till datum-kolumn och tidskolumn? Skulle kunna göra som i "drought"-serie och köra 
-# ett slidingwindow bakåt 30 dagar med groupby(date)?

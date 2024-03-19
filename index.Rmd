@@ -1,0 +1,10 @@
+---
+title: Temperature 
+author: Felix Blomfelt
+date: 2024-03-19
+output: html_document
+---
+
+Hello World!
+
+![](visuals/day_temp.png)
