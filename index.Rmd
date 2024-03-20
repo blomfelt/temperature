@@ -10,7 +10,7 @@ current <- read_tsv('data/current_values.tsv')
 ```
 
 # Current temperature: `r current$temperature[1]`°C 
-# Humidity: `r current$humidity[1]`%.
+# Humidity: `r current$humidity[1]`%
 
 ## Today's temperature:
 ![](visuals/day_temp.png)
