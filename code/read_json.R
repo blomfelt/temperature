@@ -7,7 +7,7 @@ library("hms")
 slidingwindow <-  30
 
 # Read in the old data
-all_values <- read_tsv("values.tsv")
+all_values <- read_tsv("data/values.tsv")
 data_files <- list.files(path = "data", pattern = ".json", full.names = TRUE)
 
 for (i in 1:length(data_files)){
@@ -59,4 +59,4 @@ all_values <- all_values %>%
     filter(today()-date <= slidingwindow)
 
 # Write it to the file again
-write_tsv(all_values, "values.tsv")
+write_tsv(all_values, "data/values.tsv")

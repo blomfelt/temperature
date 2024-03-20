@@ -4,7 +4,7 @@ library(tidyverse)
 library(hms)
 
 # Read in the values
-values <- read_tsv("values.tsv")
+values <- read_tsv("data/values.tsv")
 
 # Change so easier to handle
 normalized_values <- values %>%
@@ -40,4 +40,4 @@ last_values <- normalized_values %>%
     slice_tail(n = 1) %>%
     ungroup()
 
-last_values
+write_tsv(last_values, "data/current_values.tsv")
