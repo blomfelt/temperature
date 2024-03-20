@@ -2,7 +2,7 @@ name: Temperature data
 run-name: ${{ github.actor }} running a Snakemake pipeline 🚀
 on: 
   schedule:
-  - cron: '50 * * * *'
+  - cron: '18 * * * *'
 jobs:
   Explore-GitHub-Actions:
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
         with:
           directory: '.'
           snakefile: 'Snakefile'
-          args: '--cores 1 --use-conda --conda-cleanup-pkgs cache'
+          args: '-F --cores 1 --use-conda --conda-cleanup-pkgs cache'
           stagein: '' # additional preliminary commands to run (can be multiline)
           show-disk-usage-on-error: true
       - name: Configure git on runner
