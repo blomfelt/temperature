@@ -1,8 +1,8 @@
 name: Temperature data
-run-name: ${{ github.actor }} running a Snakemake pipeline 🚀
+run-name: ${{ github.actor }} is running a Snakemake pipeline 🚀
 on: 
   schedule:
-  - cron: '18 * * * *'
+  - cron: '18 6-22 * * *'
 jobs:
   Get-temperature-data:
     runs-on: ubuntu-latest
