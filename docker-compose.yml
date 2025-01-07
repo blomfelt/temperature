@@ -1,0 +1,8 @@
+services:
+  nginx:
+    image: nginx:1-alpine
+    ports:
+      - 8088:80
+    volumes:
+      - ./public/:/usr/share/nginx/html
+    restart: unless-stopped
