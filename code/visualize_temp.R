@@ -38,8 +38,11 @@ for (i in 1:length(data_files)){
     # Create time and date
     date_df <- as.data.frame(current_sensor[[1]]$timestamp)
     date_time <- ymd_hms(date_df)
+    print(date_time)
     date <- as_date(date_time)
-    time <- as_hms(date_time)
+    # Correct for timezone
+    time <- as_hms(as_hms(date_time)+as_hms("1:00:00"))
+    print(time)
 
     # Add date and time
     values["date"] <- date
