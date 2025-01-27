@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-sensors=(25765 31437)
+#sensors=(25765 31437)
+sensors=(25002 31437)
 
 for sensor in ${sensors[@]}
 do

@@ -4,10 +4,13 @@ library("rjson")
 library("tidyverse")
 library("hms")
 
-slidingwindow <-  30
+slidingwindow <-  365 # 365 days old maximum? Consider removing?
 
 # Read in the old data
 all_values <- read_tsv("data/values.tsv")
+# Copy it out
+write_tsv(all_values, "data/values_old.tsv")
+
 data_files <- list.files(path = "data", pattern = ".json", full.names = TRUE)
 
 for (i in 1:length(data_files)){
